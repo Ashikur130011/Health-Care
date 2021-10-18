@@ -1,0 +1,37 @@
+import React from 'react';
+import { Card, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import './Medicine.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBookMedical, faCapsules} from '@fortawesome/free-solid-svg-icons'
+
+const Medicine = ({medicine}) => {
+    const{name, price, description, img } = medicine;
+    return (
+        <div>
+            <Card>
+            <Card.Title>
+                <span className="text-danger"><FontAwesomeIcon icon={faCapsules}/></span>
+                <span className="text-success fw-bold fs-4"> {name}</span>
+            </Card.Title>
+    
+            <div className='mx-auto' style={{ width: '60%' }}>
+            <Card.Img variant="top" src={img} />
+            </div>
+            <Card.Body>
+            <Card.Text>
+            <span className="text-primary"><FontAwesomeIcon icon={faBookMedical}/></span> {description.slice(0,150)}
+            </Card.Text>
+            </Card.Body>
+            <h2>Price: ${price}</h2>
+            <div className="pb-4">
+            <Link to ={`/medidetails/${name}`}>
+                <Button variant="primary">Details about {name}</Button>
+            </Link>
+            </div>
+            </Card>
+        </div>
+    );
+};
+
+export default Medicine;
