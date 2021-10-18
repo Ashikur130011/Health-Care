@@ -13,7 +13,6 @@ const Medicines = () => {
     },[])
     return (
         <div>
-            <h1 className="text-start mb-4 container">Featured Products</h1>
             <div className=" container">
         <Row xs={1} md={3} className="g-4 mb-4">
            {

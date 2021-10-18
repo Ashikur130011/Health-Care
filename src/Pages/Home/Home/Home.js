@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Banner from '../Banner/Banner';
 import Medicine from '../Medicine/Medicine';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBookMedical, faCapsules } from '@fortawesome/free-solid-svg-icons';
+import { faBookMedical, faCapsules, faMedkit } from '@fortawesome/free-solid-svg-icons';
 import './Home.css'
 
 const Home = () => {
@@ -20,6 +20,9 @@ const Home = () => {
             <Banner></Banner>
             <div className="home-container">
                 <div className="container">
+                    <div className="row">
+                        <div className="col-md-9">
+                        <h1 className="text-start mb-4 container">Featured Products <FontAwesomeIcon icon={faMedkit}/></h1>
                 <Row xs={2} md={3} className="g-4 mb-4">
                     {
                         medicines.map(medicine => <Medicine
@@ -28,9 +31,10 @@ const Home = () => {
                         ></Medicine>)
                     } 
                 </Row>
-                </div>
-
-                <div className="me-2" style={{ width: '30%' }}>
+                        </div>
+                        <div className="col-md-3">
+                            
+                <div className="me-2" >
                 <Card>
                     <h1>Today's Offer</h1>
             <Card.Title>
@@ -54,11 +58,34 @@ const Home = () => {
             </div>
             </Card>
                 </div>
+                        </div>
+                    </div>
+               
+                {/* Last Chance Products */}
+               {/*  <Row  xs={2} md={3} className="lastChance-product container g-4">
+                <Card style={{ weight: '10rem' }}>
+                    
+                <div className="product-flex">
+                    <div>
+                        <Card.Img style={{ width: '100%' }} variant="top" src="https://i.ibb.co/rFRbRGr/Fortamox.jpg" />
+                    </div>  
+                    <div>
+                        <Card.Title>Card Title</Card.Title>
+                    </div>
+                    
+                </div>
+                </Card>
+                
+            </Row> */}
+                </div>
+
             </div>
             
             <Link  to="/medicines">
                 <Button>See More Medicines</Button>
             </Link>
+
+            
         </div>
     );
 };
