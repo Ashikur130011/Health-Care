@@ -1,5 +1,6 @@
 .extra-card{
     background-image: url("../../../images/extra-card.jpg");
+    height: 100px;
 }
 .lastChance-product{
     display: grid;

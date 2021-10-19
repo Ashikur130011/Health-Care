@@ -2,12 +2,13 @@ import React from 'react';
 import { Container, Nav, Navbar, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
+import './Header.css'
 
 const Header = () => {
     const {user, logOut} = useAuth();
     return (
         <>
-        <Navbar sticky="top" collapseOnSelect expand="lg" className="bg-white" >
+        <Navbar sticky="top" collapseOnSelect expand="lg" className="header-bg" >
             <Container>
             <Navbar.Brand href="/home">
                 <img
@@ -30,14 +31,15 @@ const Header = () => {
                 <Navbar.Text>
                     <a href="#login"> { user?.displayName}</a>
                 </Navbar.Text>
-                <div className="me-3">
-                <img className=" rounded-circle" src={user?.photoURL} alt="" />
+                <div className="p-3">
+                <img className=" rounded-circle" width="50"
+                height="50" src={user?.photoURL} alt="" />
                 </div>
 
                 <div>
                 {user?.email ?
         <Button onClick={logOut} variant="success">Log Out</Button>:
-        <Nav.Link as={Link} to="/login"><span className="text-dark fw-bold">Sign Up</span></Nav.Link>}
+        <Nav.Link as={Link} to="/register"><span className="text-dark fw-bold">Sign In</span></Nav.Link>}
                 </div>
             </Navbar.Collapse>
             </Container>

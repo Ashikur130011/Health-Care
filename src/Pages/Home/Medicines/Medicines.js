@@ -13,7 +13,7 @@ const Medicines = () => {
     },[])
     return (
         <div>
-            <div className=" container">
+            <div className=" container mt-5">
         <Row xs={1} md={3} className="g-4 mb-4">
            {
                medicines.map(medicine => <Medicine

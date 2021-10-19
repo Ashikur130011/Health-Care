@@ -7,10 +7,11 @@ import NotFound from './Pages/NotFound/NotFound';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import MediDetails from './Pages/MediDetails/MediDetails';
-import Login from './Pages/Login/Login/Login';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import AuthProvider from './contexts/AuthProvider';
 import Contact from './Pages/Home/Contact/Contact';
+import Register from './Pages/Login/Register/Register'
+
 
 function App() {
   return (
@@ -28,8 +29,8 @@ function App() {
           <Route path='/medicines'>
             <Medicines></Medicines>
           </Route>
-          <Route path="/login">
-            <Login></Login>
+          <Route path="/register">
+            <Register></Register>
           </Route>
           <Route path="/contact">
             <Contact></Contact>

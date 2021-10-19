@@ -21,7 +21,7 @@ const Banner = () => {
               aria-describedby="basic-addon2"
               />
               <Button className="w-25 input-btn text-white ">
-              <span className="fs-5"><FontAwesomeIcon icon={faSearch}/> Search</span>
+              <span><FontAwesomeIcon icon={faSearch}/> Search</span>
               </Button>
             </InputGroup>
            </div>
