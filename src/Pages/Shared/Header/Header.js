@@ -25,11 +25,14 @@ const Header = () => {
             <Navbar.Collapse variant="dark" className="justify-content-end">
             <Nav.Link as={Link} to="/home"><span className="text-dark fw-bold">Home</span></Nav.Link>
                 <Nav.Link as={Link} to="/medicines"><span className="text-dark fw-bold">Products</span></Nav.Link>
+
+                <Nav.Link as={Link} to="/about"><span className="text-dark fw-bold">About Us</span></Nav.Link>
+
                 <Nav.Link as={Link} to="/contact"><span className="text-dark fw-bold">Contact</span></Nav.Link>
                 
                 {/* logged in person's identity */}
                 <Navbar.Text>
-                    <a href="#login"> { user?.displayName}</a>
+                    <h4 href="#login"> { user?.displayName}</h4>
                 </Navbar.Text>
                 <div className="p-3">
                 <img className=" rounded-circle" width="50"

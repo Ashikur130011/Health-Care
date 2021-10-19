@@ -11,7 +11,7 @@ const Footer = () => {
                 <h5>Opentime : Monday - Friday: 9:00-20.00</h5>
             </div>
             <div className="col-md-3">
-                <h2 className="text-warning">CUSTOMER CARE</h2>
+                <h2 className="text-info ">CUSTOMER CARE</h2>
                 <h6>Terms</h6>
                 <h6>Privacy</h6>
                 <h6>Shipping Options</h6>
@@ -19,7 +19,7 @@ const Footer = () => {
                 <h6>Return Policy</h6>
             </div>
             <div className="col-md-3">
-                <h2 className="text-warning">QUICK SHOP</h2>
+                <h2 className="text-info">QUICK SHOP</h2>
                 <h6>Disposable Gloves</h6>
                 <h6>Cleaning Scissor</h6>
                 <h6>Scissors</h6>
@@ -33,7 +33,7 @@ const Footer = () => {
                 <p>betterlife@gmail.com</p>
             </div>
         </div>
-        </div>
+    </div>
         
     );
 };

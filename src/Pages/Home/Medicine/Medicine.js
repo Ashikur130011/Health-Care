@@ -9,6 +9,7 @@ const Medicine = ({medicine}) => {
     const{id, name, price, description, img } = medicine;
     return (
         <div>
+            {/* --------Single Medicine------ */}
             <Card>
             <Card.Title>
                 <span className="text-danger"><FontAwesomeIcon icon={faCapsules}/></span>

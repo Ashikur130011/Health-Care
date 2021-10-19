@@ -11,6 +11,7 @@ import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import AuthProvider from './contexts/AuthProvider';
 import Contact from './Pages/Home/Contact/Contact';
 import Register from './Pages/Login/Register/Register'
+import AboutUs from './Pages/Home/AboutUs/AboutUs';
 
 
 function App() {
@@ -26,15 +27,18 @@ function App() {
           <Route path='/home'>
             <Home></Home>
           </Route>
-          <Route path='/medicines'>
+          <PrivateRoute path='/medicines'>
             <Medicines></Medicines>
-          </Route>
+          </PrivateRoute>
           <Route path="/register">
             <Register></Register>
           </Route>
-          <Route path="/contact">
-            <Contact></Contact>
+          <Route path="/about">
+            <AboutUs></AboutUs>
           </Route>
+          <PrivateRoute path="/contact">
+            <Contact></Contact>
+          </PrivateRoute>
           <PrivateRoute path="/medidetails/:medicineId">
             <MediDetails></MediDetails>
           </PrivateRoute>

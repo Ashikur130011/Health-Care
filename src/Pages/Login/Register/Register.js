@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from "../../../Hooks/useAuth";
+import useFirebase from "../../../Hooks/useFirebase";
 
 const Register = () => {
     const [name, setName] = useState('')
@@ -11,7 +12,8 @@ const Register = () => {
     const [isLogin, setIsLogIn] = useState(false);
     const [error, setError] = useState('');
     const { signInUsingGoogle } = useAuth();
-
+    const {user,setUser}=useFirebase();
+    console.log(user);
     const auth = getAuth();
 
     const handleNameInput = e => {
@@ -41,8 +43,9 @@ const Register = () => {
           setError('Ensure string has two uppercase letter');
           return;
         }
+        prossesRegister();
         
-        isLogin? processSignIn(email, password): prossesRegister(name, email, password);
+        // isLogin? processSignIn(): 
       }
 
       const processSignIn =(email, password) => {
@@ -60,23 +63,20 @@ const Register = () => {
         updateProfile(auth.currentUser, {displayName: name})
          .then(result => { })   
       }
-      const prossesRegister = (name, email, password) => {
-        createUserWithEmailAndPassword(auth, name, email, password)
-        .then((result) => {
-          const user = result.user;
-          console.log(user);
-          setError('')
-          setUserName();
-        })
-        .catch((error) => {
-          setError(error.message);
-        })
+      const prossesRegister = () => {
+        createUserWithEmailAndPassword(auth, email, password)
+  .then((result) => {
+    setUser(result.user)
+  })
+  .catch((error) => {
+  
+  });
       }
     return (
         <div className="container w-50 mx-auto mb-lg-5">
             <h1 className="text-primary">{isLogin ? 'Login':
         'Register'} Here</h1>
-            <div className="bg-success p-4  rounded-4">
+            <div className="bg-success p-4  rounded-4 ">
             <Form onSubmit={handleRegistration}>
             
   <Form.Group className="mb-3" controlId="formBasicEmail">

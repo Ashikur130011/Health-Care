@@ -59,7 +59,7 @@
         "id": 8,
         "name": "Lungsupport",
         "price": "100",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "Fortamox is indicated for the acute treatment of the cutaneous manifestations of moderate to severe erythema nodosum leprosum (ENL). Thalidomide is not indicated as monotherapy for such ENL treatment in the presence of moderate to severe neuritis",
         "img": "https://i.ibb.co/d0TSSBS/Lungsupport.jpg",
         "category": "stomach remedies"
     },
@@ -67,7 +67,7 @@
         "id": 9,
         "name": "Macdin-600",
         "price": "300",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "Adant-Meiji is a sterile, viscoelastic non-pyrogenic solution of purified, high molecular weight sodium hyaluronate. Each 2.5 mL of TriVisc contains 10mg/mL of sodium hyaluronate dissolved in a physiological saline.",
         "img": "https://i.ibb.co/ZK72vsm/Macdin-600.jpg",
         "category": "anti-Fungal"
     },
@@ -75,7 +75,7 @@
         "id": 10,
         "name": "Livbilinic",
         "price": "300",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "Fortamox is indicated for the acute treatment of the cutaneous manifestations of moderate to severe erythema nodosum leprosum (ENL). Thalidomide is not indicated as monotherapy for such ENL treatment in the presence of moderate to severe neuritis.",
         "img": "https://i.ibb.co/qNwfSWy/Livbilinic.jpg",
         "category": "stomach remedies"
     },
@@ -83,7 +83,7 @@
         "id": 11,
         "name": "Ringerfundin",
         "price": "200",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "Deodorizing-Nabifar is indicated for the short-term treatment and symptomatic relief of insomnia characterized by difficulty in falling asleep, frequent nocturnal awakenings and/or early morning awakenings.",
         "img": "https://i.ibb.co/bXyrpk3/Ringerfundin.jpg",
         "category": "pain-relief"
     },
@@ -91,7 +91,7 @@
         "id": 12,
         "name": "Teqler-Theatre",
         "price": "220",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "Keratosis, Rough skin,Wrinkles associated with aging, Alzheimer's disease, Cancer Prevention, dementia, degenerative diseases, coronary heart..",
         "img": "https://i.ibb.co/kDmsvGw/Teqler-Theatre.jpg",
         "category": "anti-Fungal"
     },
@@ -99,7 +99,7 @@
         "id": 13,
         "name": "Teqler-500",
         "price": "300",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "Demoferidon is indicated for the short-term treatment of insomnia. Zaleplon has been shown to decrease the time to sleep onset for up to 30 days in controlled clinical trials..",
         "img": "https://i.ibb.co/kDmsvGw/Teqler-Theatre.jpg",
         "category": "stomach remedies"
     },
@@ -107,7 +107,7 @@
         "id": 14,
         "name": "Nabifar-500",
         "price": "300",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "Treatment of elevated IOP in adult patients with open-angle glaucoma or ocular HTN for whom monotherapy provides insufficient IOP reduction.",
         "img": "https://i.ibb.co/WsTpjFx/Deodorizing-Nabifar.jpg",
         "category": "pain-relief"
     },
@@ -115,7 +115,7 @@
         "id": 15,
         "name": "Adant-250",
         "price": "300",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "Adant-Meiji is a sterile, viscoelastic non-pyrogenic solution of purified, high molecular weight sodium hyaluronate. Each 2.5 mL of TriVisc contains 10mg/mL of sodium hyaluronate dissolved in a physiological saline.",
         "img": "https://i.ibb.co/qxz20fZ/Adant-Meiji.jpg",
         "category": "pain-relief"
     }

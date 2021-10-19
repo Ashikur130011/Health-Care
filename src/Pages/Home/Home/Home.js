@@ -17,49 +17,52 @@ const Home = () => {
     },[])
     return (
         <div className="mb-lg-5">
+
             <Banner></Banner>
+
             <div className="home-container">
                 <div className="container mb-5">
                     <div className="row">
+                        {/* ------Feature Products----- */}
                         <div className="col-md-9">
                         <h1 className="text-start text-primary mb-4 container">Featured Products <FontAwesomeIcon icon={faMedkit}/></h1>
-                <Row xs={2} md={3} className="g-4 mb-4">
-                    {
-                        medicines.map(medicine => <Medicine
-                        key={medicine.id}
-                        medicine={medicine}
-                        ></Medicine>)
-                    } 
-                </Row>
-                <Link  to="/medicines">
-                <Button>See More Medicines</Button>
-            </Link>
+                            <Row xs={2} md={3} className="g-4 mb-4">
+                                {
+                                    medicines.map(medicine => <Medicine
+                                    key={medicine.id}
+                                    medicine={medicine}
+                                    ></Medicine>)
+                                } 
+                            </Row>
+                            <Link  to="/medicines">
+                                <Button>See More Medicines</Button>
+                            </Link>
                         </div>
-                        {/* offer */}
-                        <div className="col-md-3">
-                            
-                <div className="me-2" >
-                <h1>Today's Offer</h1>
+
+                 {/* -------offer part------- */}
+    <div className="col-md-3">               
+        <div className="me-2" >
+            <h1>Today's Offer</h1>
                 <Card>
-            <Card.Title>
-                <span className="text-danger"><FontAwesomeIcon icon={faCapsules}/></span>
-                <span className="text-success fw-bold fs-4"> Potassium</span>
-            </Card.Title>
+                <Card.Title>
+                    <span className="text-danger"><FontAwesomeIcon icon={faCapsules}/></span>
+                    <span className="text-success fw-bold fs-4"> Potassium</span>
+                </Card.Title>
     
-            <div className='mx-auto' style={{ width: '60%' }}>
+        <div className='mx-auto' style={{ width: '60%' }}>
             <Card.Img variant="top" src="https://i.ibb.co/d0TSSBS/Lungsupport.jpg" />
-            </div>
-            <Card.Body>
+        </div>
+        <Card.Body>
             <Card.Text>
-            <span className="text-primary"><FontAwesomeIcon icon={faBookMedical}/></span> Cefixime is a third generation semisynthetic cephalosporin antibiotic for oral administration. It is bactericidal against a broad spectrum of gram positive and gram negative bacteria at easily achievable plasma concentrations. It kills bacteria by interfering in the synthesis of bacterial cell wall. It is highly stable in the presence of Beta-lactamase enzyme.
+               <span className="text-primary"><FontAwesomeIcon icon={faBookMedical}/></span> Cefixime is a third generation semisynthetic cephalosporin antibiotic for oral administration. It is bactericidal against a broad spectrum of gram positive and gram negative bacteria at easily achievable plasma concentrations. It kills bacteria by interfering in the synthesis of bacterial cell wall. It is highly stable in the presence of Beta-lactamase enzyme.
             </Card.Text>
-            </Card.Body>
+        </Card.Body>
             <h2>Price: $200</h2>
-            <div className="pb-4">
+        <div className="pb-4">
             <Link to ={`/medidetails/`}>
                 <Button variant="success">Add to cart</Button>
             </Link>
-            </div>
+        </div>
             </Card>
                 </div>
                 <div className="me-2 mt-5 pt-5" >
@@ -89,8 +92,9 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                {/* --------------- */}
+                {/* -------Offer-end-------- */}
                 
+                {/* -------Last Chance------- */}
                 <div className="container">
                 <h2 className="text-start text-primary">Last chance to buy <FontAwesomeIcon icon={faPlus}/></h2>
                     <div className="row">
@@ -173,14 +177,16 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
+
+                        {/* -------last Chance------- end */}
                         <div className="col-md-3 extra-card">
                             <h4>Nutritional Supplements discount</h4>
                             <h3>25% Off</h3>
                         </div>
                     </div>
-                    {/* ------------------ */}
+                    {/* ---------Extra Feature--------- */}
                     <div className="row container mx-auto btn-light py-3 mt-5">
-            <div className="col-md-3">
+            <div className="col-md-3 border-end border-2 border-warning">
                 <div className="row">
                 <div className="col-3 align-items-center">
                 <h1 className="text-warning"><FontAwesomeIcon icon={faTruck}/></h1>
@@ -191,9 +197,9 @@ const Home = () => {
                 </div>
                 </div>
             </div>
-            <div className="col-md-3">
+            <div className="col-md-3 border-end border-2 border-warning">
             <div className="row">
-                <div className="col-3 align-items-center">
+                <div className="col-3 align-items-center ">
                 <h1 className="text-warning"><FontAwesomeIcon icon={faGifts}/></h1>
                 </div>
                 <div>
@@ -202,7 +208,7 @@ const Home = () => {
                 </div>
                 </div>
             </div>
-            <div className="col-md-3">
+            <div className="col-md-3 border-end border-2 border-warning">
             <div className="row">
                 <div className="col-3 align-items-center">
                 <h1 className="text-warning"><FontAwesomeIcon icon={faCalendarTimes}/></h1>
@@ -224,17 +230,10 @@ const Home = () => {
                 </div>
                 </div>
             </div>
+        </div>       
         </div>
-                    
-                </div>
-                
-
-            </div>
-            
-            
-
-            
-        </div>
+    </div>
+    </div>
     );
 };
 

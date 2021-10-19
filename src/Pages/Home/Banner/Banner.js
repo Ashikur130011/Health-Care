@@ -8,12 +8,12 @@ import {  faSearch } from '@fortawesome/free-solid-svg-icons'
 const Banner = () => {
     return (
         <div>
-            
             <div className="banner-body pb-5">
-           <div className="container">
-           <h1 className="banner-h1 pt-5">Your medication, delivered</h1>
-            <h6>Say goodbye to all your healthcare worries with us</h6>
-            <br />
+                <div className="container">
+                    <h1 className="banner-h1 pt-5">Your medication, delivered</h1>
+                    <h6>Say goodbye to all your healthcare worries with us</h6>
+                    <br />
+                    {/* -------Input------ */}
             <InputGroup className=" banner-input mb-3 w-50 mx-auto">
               <FormControl className="p-2"
               placeholder="Search for product..."
@@ -26,6 +26,7 @@ const Banner = () => {
             </InputGroup>
            </div>
             </div>
+            {/* -------extra Feture------- */}
             <Container className="my-5 pt-5">
                 <Row>
                     <Col className="bg-success p-3" xs={6} md={4}>
