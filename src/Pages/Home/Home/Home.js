@@ -87,7 +87,11 @@ const Home = () => {
             </Link>
             </div>
             </Card>
-
+            <div className="col-md-12 extra-card">
+                            <h4 className="fw-bold fs-3 p-4 mt-5">Nutritional Supplements discount</h4>
+                            <h1>25% Off</h1>
+                            
+                        </div>
                 </div>
                         </div>
                     </div>
@@ -106,7 +110,7 @@ const Home = () => {
                                             <img src="https://i.ibb.co/ZK72vsm/Macdin-600.jpg" style={{ width: '100%' }} alt="" />
                                         </div>
                                         <div className="col-md-4">
-                                        <h6>Radiogardase</h6>
+                                        <h6 className="text-success">Radiogardase</h6>
                                         <h5>price: $120</h5>
                                         </div>
                                     </div>
@@ -117,7 +121,7 @@ const Home = () => {
                                             <img src="https://i.ibb.co/qxz20fZ/Adant-Meiji.jpg" style={{ width: '100%' }} alt="" />
                                         </div>
                                         <div className="col-md-4">
-                                        <h6>Atenolol Tab</h6>
+                                        <h6 className="text-success">Atenolol Tab</h6>
                                         <h5>price: $220</h5>
                                         </div>
                                     </div>
@@ -128,7 +132,7 @@ const Home = () => {
                                             <img src="https://i.ibb.co/fDbKcCL/Carbo-TS.jpg" style={{ width: '100%' }} alt="" />
                                         </div>
                                         <div className="col-md-4">
-                                        <h6>Merfeormin</h6>
+                                        <h6 className="text-success">Merfeormin</h6>
                                         <h5>price: $240</h5>
                                         </div>
                                     </div>
@@ -148,7 +152,7 @@ const Home = () => {
                                             <img src="https://i.ibb.co/qNwfSWy/Livbilinic.jpg" style={{ width: '100%' }} alt="" />
                                         </div>
                                         <div className="col-md-4">
-                                        <h6>Cortef</h6>
+                                        <h6 className="text-success">Cortef</h6>
                                         <h5>price: $200</h5>
                                         </div>
                                     </div>
@@ -159,7 +163,7 @@ const Home = () => {
                                             <img src="https://i.ibb.co/bXyrpk3/Ringerfundin.jpg" style={{ width: '100%' }} alt="" />
                                         </div>
                                         <div className="col-md-4">
-                                        <h6>Clindamycin</h6>
+                                        <h6 className="text-success">Clindamycin</h6>
                                         <h5>price: $140</h5>
                                         </div>
                                     </div>
@@ -170,7 +174,7 @@ const Home = () => {
                                             <img src="https://i.ibb.co/kDmsvGw/Teqler-Theatre.jpg" style={{ width: '100%' }} alt="" />
                                         </div>
                                         <div className="col-md-4">
-                                        <h6>Tremeterence</h6>
+                                        <h6 className="text-success">Tremeterence</h6>
                                         <h5>price: $200</h5>
                                         </div>
                                     </div>
@@ -179,10 +183,7 @@ const Home = () => {
                         </div>
 
                         {/* -------last Chance------- end */}
-                        <div className="col-md-3 extra-card">
-                            <h4>Nutritional Supplements discount</h4>
-                            <h3>25% Off</h3>
-                        </div>
+                        
                     </div>
                     {/* ---------Extra Feature--------- */}
                     <div className="row container mx-auto btn-light py-3 mt-5">

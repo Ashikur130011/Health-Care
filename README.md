@@ -3,7 +3,7 @@ Online pharmacies offer better pricing than offline stores, with increased acces
 
 ## Life site Link
 
-In the project directory, you can run:
+https://better-life-aaa42.web.app/
 
 ## Advantage of this website
 

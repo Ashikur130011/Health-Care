@@ -1,7 +1,8 @@
 import React from 'react';
 import { Row } from 'react-bootstrap';
-import about1 from '../../../images/img-about-us-01.png'
-import about2 from '../../../images/img-about-us-02.png'
+import about1 from '../../../images/img-about-us-01.png';
+import about2 from '../../../images/img-about-us-02.png';
+import about3 from '../../../images/about-3.png'
 
 const AboutUs = () => {
     return (
@@ -13,8 +14,9 @@ const AboutUs = () => {
                 <p>We’re happy to help. If you have any questions regarding a product or an order, please feel free to reach out to us at info@domain.com.</p>
             {/* --------Feature-img------- */}
                 <div>
-                    <Row className="d-flex justify-content-lg-between g-4 my-5">
+                    <Row className=" g-4 my-5">
                         <div className="col-lg-4 "><img src={about1} alt=""  /></div>
+                        <div className="col-lg-4 "><img src={about3} style={{ width:'100%' }} alt="" /></div>
                         <div className="col-lg-4"><img src={about2} alt="" /></div>
                     </Row>
                 </div>

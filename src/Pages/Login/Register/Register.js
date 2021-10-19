@@ -1,115 +1,116 @@
-import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
+import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword , updateProfile } from "firebase/auth";
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import useAuth from "../../../Hooks/useAuth";
 import useFirebase from "../../../Hooks/useFirebase";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 const Register = () => {
-    const [name, setName] = useState('')
+  const [isLogin,setIsLoging]=useState('');
+  const [name, setName] = useState('')
     const [email, setEmail] = useState('');
+    const [error,setError]=useState('');
     const [password, setPasswowrd] = useState('');
-    const [isLogin, setIsLogIn] = useState(false);
-    const [error, setError] = useState('');
-    const { signInUsingGoogle } = useAuth();
-    const {user,setUser}=useFirebase();
-    console.log(user);
-    const auth = getAuth();
+  const {setUser,signInUsingGoogle}=useFirebase()
 
-    const handleNameInput = e => {
-        setName(e.target.value)
-    }
+  const auth = getAuth();
 
-    const handleEmailInput = e => {
-        setEmail(e.target.value)
-    }
+  const handleNameInput = e => {
+    setName(e.target.value)
+}
+const handleEmailInput = e => {
+  setEmail(e.target.value)
+}
+
+const handlePasswordInput = e => {
+  setPasswowrd(e.target.value)
+}
+
+const handleRegistration = e => {
+  e.preventDefault();
+  registers();
+  console.log(email, password)
+  if( password.length < 6) {
+    return setError('please enter 6 characters long password');
     
-    const handlePasswordInput = e => {
-        setPasswowrd(e.target.value)
-    }
+  }
+  if( password.length > 6) {
+    return setError('');
+    
+  }
+}
 
-    const toggleLogin = e => {
-        setIsLogIn(e.target.checked)
-    }
-
-    const handleRegistration = e => {
-        e.preventDefault();
-        console.log(name,email, password)
-        if( password.length < 6) {
-          setError('please enter 6 characters long password');
-          return;
-        }
-        if(!/(?=.*[A-Z].*[A-Z])/.test(password)){
-          setError('Ensure string has two uppercase letter');
-          return;
-        }
-        prossesRegister();
-        
-        // isLogin? processSignIn(): 
-      }
-
-      const processSignIn =(email, password) => {
-        signInWithEmailAndPassword(auth, email, password)
-        .then(result => {
-          const user = result.user;
-          console.log(user)
-        })
-        .catch(error => {
-          setError(error.message);
-        })
-      }
-
-      const setUserName = () =>{
-        updateProfile(auth.currentUser, {displayName: name})
-         .then(result => { })   
-      }
-      const prossesRegister = () => {
-        createUserWithEmailAndPassword(auth, email, password)
+const registers=()=>{
+  createUserWithEmailAndPassword(auth, email, password)
+.then((result) => {
+// Signed in 
+setUser(result.user);
+setUserName()
+// ...
+})
+.catch((error) => {
+console.log(error.message);
+});
+}
+const setUserName = () =>{
+  updateProfile(auth.currentUser, {displayName: name})
+   .then(result => { })   
+}
+const signin=()=>{
+  signInWithEmailAndPassword(auth, email, password)
   .then((result) => {
-    setUser(result.user)
+    // Signed in 
+    setUser(result.user);
+    // ...
   })
   .catch((error) => {
-  
+  console.log(error.message);
   });
-      }
-    return (
-        <div className="container w-50 mx-auto mb-lg-5">
-            <h1 className="text-primary">{isLogin ? 'Login':
-        'Register'} Here</h1>
-            <div className="bg-success p-4  rounded-4 ">
-            <Form onSubmit={handleRegistration}>
-            
-  <Form.Group className="mb-3" controlId="formBasicEmail">
+}
 
-    {!isLogin && <Form.Control className="mb-4" type="name" onBlur={handleNameInput} placeholder="Enter your name" required />}
+const toggleLogin=(e)=>{
+  setIsLoging(e.target.checked)
+}
+  return(
+    <div className="container w-50 mx-auto mb-lg-5 p-5">
+      <h1 className="text-primary">{isLogin ? 'Login':'Register'} Here</h1>
+      <div className="bg-success p-4  rounded-4 ">
 
-    <Form.Control type="email" onBlur={handleEmailInput} placeholder="Enter email" required />
-    <Form.Text className=" text-white">
-      We'll never share your email with anyone else.
-    </Form.Text>
-  </Form.Group>
+        <Form >        
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            {!isLogin && <Form.Control className="mb-4" type="name" onChange={handleNameInput} placeholder="Enter your name" required />}
 
-  <Form.Group className="mb-3" controlId="formBasicPassword">
-    <Form.Control type="password" onBlur={handlePasswordInput} placeholder="Password" required />
-  </Form.Group>
+            <Form.Control type="email" onBlur={handleEmailInput} placeholder="Enter email" required />
+            <Form.Text className=" text-white">
+              We'll never share your email with anyone else.
+            </Form.Text>
+          </Form.Group>
 
-  <Form.Group className="mb-3"  onChange={toggleLogin} controlId="formBasicCheckbox">
-    <Form.Check type="checkbox" label="Already Registered?" />
-  </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Control type="password" onChange={handlePasswordInput} placeholder="Password" required />
+            <label className="text-danger">{error}</label>
+          </Form.Group>
+
+          <Form.Group className="mb-3"  onClick={toggleLogin} controlId="formBasicCheckbox">
+            <Form.Check type="checkbox" label="Already Registered?" />
+          </Form.Group>
+
+          
+
+        </Form>
+        {isLogin? <button className="btn btn-primary" onClick={signin}>Sign In</button>: <button className="btn btn-warning" onClick={handleRegistration}>Register</button> }
+         
+      </div>
+
+
+    <Button onClick={signInUsingGoogle} className="mt-3">Google Sign</Button>
+    
   
-
-  <Button variant="primary" type="submit">
-  {isLogin? "Login": 'Register'}
-  </Button>
-  
-</Form>
-            </div>
-
-            {isLogin &&<div>----- <h1>or</h1>-----</div>}
-            {isLogin && <Button onClick={signInUsingGoogle}>Google Sign In</Button>}
-            
-        </div>
-    );
+    </div>
+  )
 };
 
 export default Register;
+
+
+ 
