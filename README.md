@@ -1,7 +1,7 @@
 # Better Life (online Pharmachy)
 Online pharmacies offer better pricing than offline stores, with increased access, lower transaction and product costs, convenience and greater anonymity for consumers.
 
-## Life site Link
+## Live site Link
 
 https://better-life-aaa42.web.app/
 
