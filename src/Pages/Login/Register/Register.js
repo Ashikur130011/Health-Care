@@ -2,15 +2,15 @@ import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword , up
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import useFirebase from "../../../Hooks/useFirebase";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 
 const Register = () => {
   const [isLogin,setIsLoging]=useState('');
   const [name, setName] = useState('')
-    const [email, setEmail] = useState('');
-    const [error,setError]=useState('');
-    const [password, setPasswowrd] = useState('');
+  const [email, setEmail] = useState('');
+  const [error,setError]=useState('');
+  const [password, setPasswowrd] = useState('');
   const {setUser,signInUsingGoogle}=useFirebase()
 
   const auth = getAuth();
@@ -29,7 +29,6 @@ const handlePasswordInput = e => {
 const handleRegistration = e => {
   e.preventDefault();
   registers();
-  console.log(email, password)
   if( password.length < 6) {
     return setError('please enter 6 characters long password');
     
@@ -49,7 +48,7 @@ setUserName()
 // ...
 })
 .catch((error) => {
-console.log(error.message);
+setError(error.message);
 });
 }
 const setUserName = () =>{
@@ -64,7 +63,7 @@ const signin=()=>{
     // ...
   })
   .catch((error) => {
-  console.log(error.message);
+  setError(error.message);
   });
 }
 
