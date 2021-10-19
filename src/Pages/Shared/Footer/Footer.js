@@ -3,7 +3,8 @@ import './Footer.css'
 
 const Footer = () => {
     return (
-        <div className="row">
+        <div className="footer-part">
+            <div className="row container mx-auto ">
             <div className="col-md-3">
                 <h1>Better Life</h1>
                 <p>Better Life is a good choice for all medical facilities, online pharmacy, raise awareness of (2019-nCoV).</p>
@@ -32,6 +33,8 @@ const Footer = () => {
                 <p>betterlife@gmail.com</p>
             </div>
         </div>
+        </div>
+        
     );
 };
 

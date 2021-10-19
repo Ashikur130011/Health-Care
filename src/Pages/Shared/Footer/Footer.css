@@ -1,6 +1,4 @@
 .footer-part{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
     background-color: rgb(54, 51, 48);
     color: whitesmoke;
 }

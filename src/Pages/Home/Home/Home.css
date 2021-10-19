@@ -1,8 +1,6 @@
-/* .home-container{
-    display: flex;
-    justify-content: space-between;
-
-} */
+.extra-card{
+    background-image: url("../../../images/extra-card.jpg");
+}
 .lastChance-product{
     display: grid;
     grid-template-columns: repeat(3, 1fr);

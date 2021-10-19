@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookMedical, faCapsules} from '@fortawesome/free-solid-svg-icons'
 
 const Medicine = ({medicine}) => {
-    const{name, price, description, img } = medicine;
+    const{id, name, price, description, img } = medicine;
     return (
         <div>
             <Card>
@@ -25,7 +25,7 @@ const Medicine = ({medicine}) => {
             </Card.Body>
             <h2>Price: ${price}</h2>
             <div className="pb-4">
-            <Link to ={`/medidetails/${name}`}>
+            <Link to ={`/medidetails/${id}`}>
                 <Button variant="primary">Details about {name}</Button>
             </Link>
             </div>

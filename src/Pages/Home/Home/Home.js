@@ -32,6 +32,7 @@ const Home = () => {
                     } 
                 </Row>
                         </div>
+                        {/* offer */}
                         <div className="col-md-3">
                             
                 <div className="me-2" >
@@ -60,24 +61,97 @@ const Home = () => {
                 </div>
                         </div>
                     </div>
-               
-                {/* Last Chance Products */}
-               {/*  <Row  xs={2} md={3} className="lastChance-product container g-4">
-                <Card style={{ weight: '10rem' }}>
-                    
-                <div className="product-flex">
-                    <div>
-                        <Card.Img style={{ width: '100%' }} variant="top" src="https://i.ibb.co/rFRbRGr/Fortamox.jpg" />
-                    </div>  
-                    <div>
-                        <Card.Title>Card Title</Card.Title>
-                    </div>
-                    
                 </div>
-                </Card>
+                {/* --------------- */}
                 
-            </Row> */}
+                <div className="container">
+                <h2 className="text-start">Last chance to buy</h2>
+                    <div className="row">
+                        <div className="col-md-9 p-3">
+                            <div className="row">
+                                <div className="col-md-4">
+                                    <div className="row">
+                                        <div className="col-md-4">
+                                            <img src="https://i.ibb.co/ZK72vsm/Macdin-600.jpg" style={{ width: '100%' }} alt="" />
+                                        </div>
+                                        <div className="col-md-4">
+                                        <h6>Card title</h6>
+                                        <h5>price</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-md-4">
+                                    <div className="row">
+                                        <div className="col-md-4">
+                                            <img src="https://i.ibb.co/ZK72vsm/Macdin-600.jpg" style={{ width: '100%' }} alt="" />
+                                        </div>
+                                        <div className="col-md-4">
+                                        <h6>Card title</h6>
+                                        <h5>price</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-md-4">
+                                    <div className="row">
+                                        <div className="col-md-4">
+                                            <img src="https://i.ibb.co/ZK72vsm/Macdin-600.jpg" style={{ width: '100%' }} alt="" />
+                                        </div>
+                                        <div className="col-md-4">
+                                        <h6>Card title</h6>
+                                        <h5>price</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>
+                        <div className="col-md-3"></div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-9 p-3">
+                            <div className="row">
+                                <div className="col-md-4">
+                                    <div className="row">
+                                        <div className="col-md-4">
+                                            <img src="https://i.ibb.co/ZK72vsm/Macdin-600.jpg" style={{ width: '100%' }} alt="" />
+                                        </div>
+                                        <div className="col-md-4">
+                                        <h6>Card title</h6>
+                                        <h5>price</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-md-4">
+                                    <div className="row">
+                                        <div className="col-md-4">
+                                            <img src="https://i.ibb.co/ZK72vsm/Macdin-600.jpg" style={{ width: '100%' }} alt="" />
+                                        </div>
+                                        <div className="col-md-4">
+                                        <h6>Card title</h6>
+                                        <h5>price</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-md-4">
+                                    <div className="row">
+                                        <div className="col-md-4">
+                                            <img src="https://i.ibb.co/ZK72vsm/Macdin-600.jpg" style={{ width: '100%' }} alt="" />
+                                        </div>
+                                        <div className="col-md-4">
+                                        <h6>Card title</h6>
+                                        <h5>price</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-3 extra-card">
+                            <h4>Nutritional Supplements discount</h4>
+                            <h3>25% Off</h3>
+                        </div>
                 </div>
+                
 
             </div>
             
