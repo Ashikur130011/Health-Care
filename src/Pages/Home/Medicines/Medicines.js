@@ -16,12 +16,12 @@ const Medicines = () => {
     return (
         <div>
             {/* -------Images-------- */}
-            <Row className=" pt-5">
+            <Row className="container pt-5 g-4 mx-auto">
                 <div className="col-md-6">
-                    <img src={product1} alt="" />
+                    <img src={product1} alt="" style={{ width:'100%' }}/>
                 </div>
                 <div className="col-md-6">
-                    <img src={product2} alt="" />
+                    <img src={product2} alt="" style={{ width:'100%' }} />
                 </div>
             </Row>
             {/* --------Producr------- */}
