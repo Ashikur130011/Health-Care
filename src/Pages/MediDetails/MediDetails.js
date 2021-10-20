@@ -37,7 +37,7 @@ const MediDetails = () => {
                             <Button>Add to Cart <FontAwesomeIcon icon={faCartPlus}/></Button>
                             <Button>Buy Now <FontAwesomeIcon icon={faGifts}/></Button>
                         </div>
-                        <div className="m-4">
+                        <div className="border-top border-2 border-danger m-4">
                         <h6>SKU: MEGA-SHOE-0578687</h6>
                         <h5>Category: {singleProduct?.category} & Anti-Itch</h5>
                         <h6>Tags: AspirinDoctorNurseThe scissorsVitamin</h6>

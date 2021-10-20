@@ -16,7 +16,7 @@ const Medicine = ({medicine}) => {
                 <span className="text-success fw-bold fs-4"> {name}</span>
             </Card.Title>
     
-            <div className='mx-auto' style={{ width: '60%' }}>
+            <div className='mx-auto border-bottom border-2 border-danger' style={{ width: '60%' }}>
             <Card.Img variant="top" src={img} />
             </div>
             <Card.Body>

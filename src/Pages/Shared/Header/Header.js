@@ -18,7 +18,7 @@ const Header = () => {
                 height="50"
                 className="d-inline-block align-top"
                 />
-                <small className="fs-1 text-dark fw-bold"> Better <span className="text-danger fw-bold">Life</span></small>
+                <small className="fs-1 text-primary fw-bold"> Better <span className="text-danger fw-bold">Life</span></small>
             
             </Navbar.Brand>
             <Navbar.Toggle />
@@ -40,9 +40,9 @@ const Header = () => {
                 </div>}
 
                 <div>
-                {user?.email ?
-        <Button onClick={logOut} variant="success">Log Out</Button>:
-        <Nav.Link as={Link} to="/register"><span className="text-dark fw-bold fs-5">Sign In</span></Nav.Link>}
+                    {user?.email ?
+                    <Button onClick={logOut} variant="success">Log Out</Button>:
+                    <Nav.Link as={Link} to="/register"><span className="text-dark fw-bold fs-5">Sign In</span></Nav.Link>}
                 </div>
             </Navbar.Collapse>
             </Container>

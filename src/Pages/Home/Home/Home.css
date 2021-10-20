@@ -1,6 +1,5 @@
 .extra-card{
-    background-image: url("../../../images/contact-bg.jpg");
-    background-repeat: no-repeat;
+   background-color: rgb(226, 220, 219);
     height: 50vh;
     box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;
 }

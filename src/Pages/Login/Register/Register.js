@@ -2,6 +2,7 @@ import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword , up
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import useFirebase from "../../../Hooks/useFirebase";
+import './Register.css'
 
 
 
@@ -41,49 +42,50 @@ const handleRegistration = e => {
 
 const registers=()=>{
   createUserWithEmailAndPassword(auth, email, password)
-.then((result) => {
+    .then((result) => {
 // Signed in 
-setUser(result.user);
-setUserName()
-// ...
-})
-.catch((error) => {
-setError(error.message);
-});
-}
-const setUserName = () =>{
-  updateProfile(auth.currentUser, {displayName: name})
-   .then(result => { })   
-}
-const signin=()=>{
-  signInWithEmailAndPassword(auth, email, password)
-  .then((result) => {
-    // Signed in 
     setUser(result.user);
-    // ...
+     setUserName()
+// ...
   })
-  .catch((error) => {
-  setError(error.message);
-  });
-}
+    .catch((error) => {
+    setError(error.message);
+    });
+  }
+  const setUserName = () =>{
+    updateProfile(auth.currentUser, {displayName: name})
+    .then(result => { })   
+  }
+  const signin=()=>{
+    signInWithEmailAndPassword(auth, email, password)
+    .then((result) => {
+      // Signed in 
+      setUser(result.user);
+      // ...
+    })
+    .catch((error) => {
+    setError(error.message);
+    });
+  }
 
 const toggleLogin=(e)=>{
   setIsLoging(e.target.checked)
 }
   return(
-    <div className="container w-50 mx-auto mb-lg-5 p-5">
-      <h1 className="text-primary">{isLogin ? 'Login':'Register'} Here</h1>
-      <div className="bg-success p-4  rounded-4 ">
+    <div className="resisterBg">
+      <div className="container w-50 mx-auto mb-lg-5 p-3">
+      <h1 className="text-primary mt-0">{isLogin ? 'Login':'Register'} Here</h1>
+      <div className=" p-4 form-shadow ">
 
         <Form >        
           <Form.Group className="mb-3" controlId="formBasicEmail">
             {!isLogin && <Form.Control className="mb-4" type="name" onChange={handleNameInput} placeholder="Enter your name" required />}
 
             <Form.Control type="email" onBlur={handleEmailInput} placeholder="Enter email" required />
-            <Form.Text className=" text-white">
-              We'll never share your email with anyone else.
-            </Form.Text>
-          </Form.Group>
+              <Form.Text>
+                We'll never share your email with anyone else.
+              </Form.Text>
+           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Control type="password" onChange={handlePasswordInput} placeholder="Password" required />
@@ -91,21 +93,20 @@ const toggleLogin=(e)=>{
           </Form.Group>
 
           <Form.Group className="mb-3"  onClick={toggleLogin} controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Already Registered?" />
+            <div className="fw-bold">
+              <Form.Check type="checkbox"  label="Already Registered?" />
+            </div>
           </Form.Group>
-
-          
-
         </Form>
-        {isLogin? <button className="btn btn-primary" onClick={signin}>Sign In</button>: <button className="btn btn-warning" onClick={handleRegistration}>Register</button> }
+        {isLogin? <button className="btn btn-primary" onClick={signin}>Sign In</button>: <button className="btn btn-success" onClick={handleRegistration}>Register</button> }
          
       </div>
-
-
-    <Button onClick={signInUsingGoogle} className="mt-3">Google Sign</Button>
-    
-  
+      {/* ------------Google Sign In---------- */}
+        <br />
+      <div className="text-primary">---------- or -----------</div>
+          <Button onClick={signInUsingGoogle} className="mt-3">Google Sign</Button>
     </div>
+  </div>
   )
 };
 

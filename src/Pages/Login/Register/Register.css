@@ -1,0 +1,11 @@
+.resisterBg{
+    background-image: url(../../../images/regi-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    padding: 10x;
+    
+}
+.form-shadow{
+    box-shadow: 0px 10px 3px 10px #fff;
+}

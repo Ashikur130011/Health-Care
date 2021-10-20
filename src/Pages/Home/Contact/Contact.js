@@ -8,7 +8,7 @@ import {
     faPhone, 
     faTasks 
     } from '@fortawesome/free-solid-svg-icons';
-
+import './Contact.css'
     /* -------Fake Data------- */
 const states = [
     {
@@ -40,8 +40,8 @@ const states = [
 
 const Contact = () => {
     return (
-        <div>
-            <div className="row container pt-5">
+        <div className="container bg-info ">
+            <div className="row pt-5">
                 <div className="col-md-4 my-4">
                     <h2>Got any</h2>
                     <h2 className="border-bottom border-2 border-danger">Questions?</h2>
@@ -54,7 +54,7 @@ const Contact = () => {
                     841 123 456 78
                     </p>
                 </div>
-                <div className="col-md-8">
+                <div className="col-md-7 contact-form">
                     <h1>Contact Us <FontAwesomeIcon icon={faTasks}/></h1>
                         <Form style={{ width: '80%' }} className="contact-form p-3 mx-auto">
                             <Form>
