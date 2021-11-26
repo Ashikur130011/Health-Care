@@ -1,6 +1,7 @@
 import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword , updateProfile } from "firebase/auth";
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import { useHistory, useLocation } from "react-router";
 import useFirebase from "../../../Hooks/useFirebase";
 import './Register.css'
 
@@ -14,6 +15,9 @@ const Register = () => {
   const [password, setPasswowrd] = useState('');
   const {setUser,signInUsingGoogle}=useFirebase()
 
+   const history = useHistory();
+   const location= useLocation();
+   const uri = location?.state?.from||"/"
   const auth = getAuth();
 
   const handleNameInput = e => {
@@ -46,6 +50,7 @@ const registers=()=>{
 // Signed in 
     setUser(result.user);
      setUserName()
+     history.push(uri)
 // ...
   })
     .catch((error) => {
@@ -61,6 +66,7 @@ const registers=()=>{
     .then((result) => {
       // Signed in 
       setUser(result.user);
+      
       // ...
     })
     .catch((error) => {
@@ -104,7 +110,7 @@ const toggleLogin=(e)=>{
       {/* ------------Google Sign In---------- */}
         <br />
       <div className="text-primary">---------- or -----------</div>
-          <Button onClick={signInUsingGoogle} className="mt-3">Google Sign</Button>
+          <Button onClick={()=>signInUsingGoogle(history,uri)} className="mt-3">Google Sign</Button>
     </div>
   </div>
   )

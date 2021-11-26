@@ -10,13 +10,15 @@ const useFirebase = () => {
     const [isLoading, setIsLoading] = useState(true);
 console.log(user);
     const auth = getAuth();
-    const signInUsingGoogle = () => {
+    const signInUsingGoogle = (history,uri) => {
         setIsLoading(true);
         const googleProvider = new GoogleAuthProvider();
 
-        signInWithPopup(auth, googleProvider)
+        return signInWithPopup(auth, googleProvider)
         .then( result => {
             setUser(result.user);
+            history.replace(uri);
+
         })
         .finally(() => setIsLoading(false))
     }

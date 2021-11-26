@@ -20,7 +20,7 @@ const Banner = () => {
               aria-label="Search for product"
               aria-describedby="basic-addon2"
               />
-              <Button className="w-25 input-btn text-white ">
+              <Button className="input-btn text-white ">
               <span><FontAwesomeIcon icon={faSearch}/> Search</span>
               </Button>
             </InputGroup>
