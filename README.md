@@ -2,8 +2,12 @@
 Online pharmacies offer better pricing than offline stores, with increased access, lower transaction and product costs, convenience and greater anonymity for consumers.
 
 ## Live site Link
-
 https://better-life-aaa42.web.app/
+
+## Better Life's Overview
+### 1. Implemented two authentication systems like Google and Email-password.
+### 2. To see product details users have to log in.
+### 3. After login, the user name, photo, and Logout button will appear on the navbar.
 
 ## Advantage of this website
 
